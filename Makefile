@@ -26,7 +26,7 @@ SRC                     = md/introduction.md       \
                           md/realisation.md        \
                           md/conclusion.md
 
-BIBFILE                 = references.bib
+BIBFILE                 = md/references.bib
 
 APPENDIX                = md/appendix.md
 
