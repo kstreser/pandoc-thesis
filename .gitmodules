@@ -1,3 +1,6 @@
 [submodule "md"]
 	path = md
 	url = https://github.com/kstreser/master-thesis.git
+[submodule "pandoc-gls"]
+	path = pandoc-gls
+	url = https://github.com/tomncooper/pandoc-gls.git
