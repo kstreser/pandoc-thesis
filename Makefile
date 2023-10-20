@@ -107,6 +107,8 @@ OPTIONS                += -V book=true
 OPTIONS                += -V titlepage=true
 OPTIONS                += -V toc-own-page=true
 
+## https://github.com/tomncooper/pandoc-gls.git
+OPTIONS                += --lua-filter pandoc-gls/pandoc-gls.lua
 
 ## Template variables
 TEMPLATE_DL_DIR         = .tmp_template_dl
@@ -131,6 +133,7 @@ TEMPLATE_FILES          = $(EISVOGEL_TEMPLATE) $(CLEANTHESIS_TEMPLATE)
 
 
 ## Simple book layout
+simple: OPTIONS            += --include-in-header=md/include-header.tex
 simple: $(TARGET)
 
 
