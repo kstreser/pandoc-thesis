@@ -6,12 +6,13 @@ References are automatically generated from the BibTex file (references.bib)
 ... which you should create/maintain using a reference manager.
 -->
 
+\setstretch{1}
+
 # Literatur {.unnumbered}
 
 \markboth{Literatur}{Literatur}
 
 ::: {#refs}
 :::
-
 
 \appendix
