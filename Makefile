@@ -75,14 +75,15 @@ OPTIONS                += -M link-citations=true
 ## cf. https://pandoc.org/MANUAL.html#citations
 #OPTIONS                += --csl=chicago-author-date-de.csl
 #OPTIONS                += --csl=chicago-note-bibliography.csl
-#OPTIONS                += --csl=ieee.csl
+OPTIONS                += --csl=ieee.csl
 #OPTIONS                += --csl=oxford-university-press-note.csl
 
 OPTIONS                += --listings
 
 OPTIONS                += -V documentclass=scrbook
 OPTIONS                += -V papersize=a4
-OPTIONS                += -V fontsize=11pt
+OPTIONS                += -V fontsize=12pt
+OPTIONS                += -V linestretch=1.5
 
 OPTIONS                += -V classoption:open=right
 OPTIONS                += -V classoption:twoside=true
