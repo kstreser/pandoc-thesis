@@ -82,7 +82,7 @@ OPTIONS                += --listings
 
 OPTIONS                += -V documentclass=scrbook
 OPTIONS                += -V papersize=a4
-OPTIONS                += -V fontsize=12pt
+OPTIONS                += -V fontsize=12bp
 OPTIONS                += -V linestretch=1.5
 
 OPTIONS                += -V classoption:open=right
