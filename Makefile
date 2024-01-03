@@ -13,7 +13,8 @@ WORKDIR                 = $(CURDIR)
 ## (Defaults to docker. To use pandoc and TeX-Live directly, create an
 ## environment variable `PANDOC` pointing to the location of your
 ## pandoc installation.)
-PANDOC                 ?= docker run --rm -v $(WORKDIR):/pandoc -w /pandoc pandoc-thesis pandoc
+#PANDOC                 ?= docker run --rm -v $(WORKDIR):/pandoc -w /pandoc pandoc-thesis pandoc
+PANDOC					= pandoc
 
 
 ## Source files
@@ -68,6 +69,7 @@ OPTIONS                += --include-in-header=$(TMP1)
 OPTIONS                += --include-before-body=$(TMP2)
 OPTIONS                += --include-after-body=$(TMP3)
 
+OPTIONS				   += -F pandoc-crossref
 OPTIONS                += --citeproc
 OPTIONS                += -M bibliography=$(BIBFILE)
 OPTIONS                += -M link-citations=true
