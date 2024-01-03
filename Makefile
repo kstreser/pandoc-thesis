@@ -100,8 +100,6 @@ OPTIONS                += --toc
 OPTIONS                += --toc-depth=3
 OPTIONS                += --number-sections
 
-OPTIONS                += -V colorlinks=true
-
 ## Eisvogel (do not change!)
 ## https://github.com/Wandmalfarbe/pandoc-latex-template
 OPTIONS                += -V book=true
