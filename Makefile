@@ -111,6 +111,8 @@ OPTIONS                += -V toc-own-page=true
 ## https://github.com/tomncooper/pandoc-gls.git
 OPTIONS                += --lua-filter pandoc-gls/pandoc-gls.lua
 
+OPTIONS            	   += --include-in-header=md/include-header.tex
+
 ## Template variables
 TEMPLATE_DL_DIR         = .tmp_template_dl
 
@@ -134,7 +136,6 @@ TEMPLATE_FILES          = $(EISVOGEL_TEMPLATE) $(CLEANTHESIS_TEMPLATE)
 
 
 ## Simple book layout
-simple: OPTIONS            += --include-in-header=md/include-header.tex
 simple: $(TARGET)
 
 
@@ -189,6 +190,12 @@ $(TEMPLATE_FILES):
 	cp $(TEMPLATE_DL_DIR)/$(TEMPLATE_FILE) ./$(TEMPLATE_FILE)
 	rm -rf $(TEMPLATE_DL_DIR)
 
+## Build diff
+diff.md:
+	cd md; git pandiff HEAD~1 > ../diff.md; cd ..
+
+diff.pdf: diff.md
+	$(PANDOC) ${OPTIONS} -o $@ diff.md $(REFERENCES)
 
 ## Build thesis
 ${TARGET}: $(SRC) $(REFERENCES) $(APPENDIX) $(META) $(BIBFILE) $(TMP)
