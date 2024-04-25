@@ -91,6 +91,7 @@ OPTIONS                += -V classoption:open=right
 OPTIONS                += -V classoption:twoside=true
 OPTIONS                += -V classoption:cleardoublepage=empty
 OPTIONS                += -V classoption:clearpage=empty
+OPTIONS                += -V classoption:numbers=noendperiod
 
 OPTIONS                += -V geometry:top=30mm
 OPTIONS                += -V geometry:left=25mm
